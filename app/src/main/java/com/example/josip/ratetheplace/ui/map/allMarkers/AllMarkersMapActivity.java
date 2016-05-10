@@ -42,7 +42,7 @@ public class AllMarkersMapActivity extends BaseActivity implements AllMarkersVie
     @Bind(R.id.app_bar)
     Toolbar mToolbar;
 
-    private Firebase firebase = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+    private Firebase firebase = new Firebase("https://myAppName.firebaseio.com/Users/");
 
     private GoogleMap mGoogleMap;
     private Marker marker;
