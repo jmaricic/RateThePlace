@@ -12,7 +12,7 @@ import com.firebase.client.FirebaseError;
  */
 public class LoadHotelsInteractorImpl implements LoadHotelsInteractor {
 
-    private Firebase firebase = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+    private Firebase firebase = new Firebase("https://myAppName.firebaseio.com/Users/");
     private final AllMarkersPresenter presenter;
 
     public LoadHotelsInteractorImpl(AllMarkersPresenter presenter) {
@@ -22,7 +22,7 @@ public class LoadHotelsInteractorImpl implements LoadHotelsInteractor {
     @Override
     public void requestMarkews() {
 
-        final Firebase hotelsRef = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+        final Firebase hotelsRef = new Firebase("https://myAppName.firebaseio.com/Users/");
         com.firebase.client.Query queryRef = hotelsRef.orderByChild("hotel");
         queryRef.addChildEventListener(new ChildEventListener() {
             @Override
