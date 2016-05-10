@@ -44,7 +44,7 @@ public class MyListFragment extends BaseFragment implements FloatingActionButton
     @Bind(R.id.app_bar)
     Toolbar mToolbar;
 
-    private Firebase hotelsRef = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+    private Firebase hotelsRef = new Firebase("https://myAppName.firebaseio.com/Users/");
     private Firebase firebase = new Firebase(hotelsRef + hotelsRef.getAuth().getUid());
     private MyCustomAdapter mAdapter;
 
