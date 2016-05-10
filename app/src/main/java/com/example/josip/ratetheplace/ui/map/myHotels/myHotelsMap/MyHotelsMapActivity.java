@@ -40,7 +40,7 @@ public class MyHotelsMapActivity extends BaseActivity implements MyHotelsView,On
 
     @Bind(R.id.app_bar)
     Toolbar toolbar;
-    private Firebase firebase = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+    private Firebase firebase = new Firebase("https://myAppName.firebaseio.com/Users/");
     private GoogleMap mGoogleMap;
     private Marker marker;
     private MyHotelPresenterImpl presenter;
