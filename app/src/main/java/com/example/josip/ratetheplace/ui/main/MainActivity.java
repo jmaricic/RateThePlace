@@ -15,7 +15,7 @@ import com.firebase.client.ValueEventListener;
 
 public class MainActivity extends BaseActivity {
 
-    private Firebase firebase = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+    private Firebase firebase = new Firebase("https://myAppName.firebaseio.com/Users/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class MainActivity extends BaseActivity {
                 initUi();
             } else {
                 String uid = firebase.getAuth().getUid();
-                Firebase usernameFir = new Firebase("https://josip-my-application.firebaseio.com/Users/" + uid);
+                Firebase usernameFir = new Firebase("https://myAppName.firebaseio.com/Users/" + uid);
                 usernameFir.child("username").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
