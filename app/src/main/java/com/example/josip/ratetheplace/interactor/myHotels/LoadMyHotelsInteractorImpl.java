@@ -11,7 +11,7 @@ import com.firebase.client.FirebaseError;
  */
 public class LoadMyHotelsInteractorImpl implements LoadMyHotelsInteractor {
 
-    private Firebase firebase = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+    private Firebase firebase = new Firebase("https://myAppName.firebaseio.com/Users/");
     private final MyHotelsPresenter presenter;
 
     public LoadMyHotelsInteractorImpl(MyHotelsPresenter presenter) {
@@ -22,7 +22,7 @@ public class LoadMyHotelsInteractorImpl implements LoadMyHotelsInteractor {
     @Override
     public void requestMarkews() {
 
-        final Firebase hotelsRef = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+        final Firebase hotelsRef = new Firebase("https://myAppName.firebaseio.com/Users/");
         com.firebase.client.Query queryRef = hotelsRef.orderByChild("hotel");
         queryRef.addChildEventListener(new ChildEventListener() {
             @Override
