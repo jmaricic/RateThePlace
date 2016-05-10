@@ -15,7 +15,7 @@ import java.util.Map;
  */
 public class RegisterUserInteractorImpl implements RegisterUserInteractor {
 
-    private Firebase userRef = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+    private Firebase userRef = new Firebase("https://myAppName.firebaseio.com/Users/");
     private final RegisterPresenter presenter;
 
     public RegisterUserInteractorImpl(RegisterPresenter pre) {
@@ -28,7 +28,7 @@ public class RegisterUserInteractorImpl implements RegisterUserInteractor {
             @Override
             public void onSuccess(Map<String, Object> stringObjectMap) {
                 String uid = stringObjectMap.get("uid").toString();
-                userRef = new Firebase("https://josip-my-application.firebaseio.com/Users/" + uid);
+                userRef = new Firebase("https://myAppName.firebaseio.com/Users/" + uid);
                 userRef.setValue(createUser(username, email, password));
                 presenter.onSuccess(email, username);
             }
@@ -51,7 +51,7 @@ public class RegisterUserInteractorImpl implements RegisterUserInteractor {
 
     @Override
     public void checkIfUserExists(final String username, final String email, final String password) {
-        Firebase userRef = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+        Firebase userRef = new Firebase("https://myAppName.firebaseio.com/Users/");
         userRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
