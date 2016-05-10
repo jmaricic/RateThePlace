@@ -9,7 +9,7 @@ import java.util.Map;
  * Created by Josip on 18.4.2016..
  */
 public class AddHotelInteractorImpl implements AddHotelInteractor {
-    private Firebase firebase = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+    private Firebase firebase = new Firebase("https://myAppName.firebaseio.com/Users/");
     private final AddNewMarkerPresenter presenter;
 
     public AddHotelInteractorImpl(AddNewMarkerPresenter presenter) {
@@ -37,7 +37,7 @@ public class AddHotelInteractorImpl implements AddHotelInteractor {
     public void addHotel(String name, double lat, double lon, String author,float foodRating,
                          float serviceRating,float comfortRating,float averageRating, String review) {
         String uid = firebase.getAuth().getUid();
-        final Firebase hotelsRef = new Firebase("https://josip-my-application.firebaseio.com/Users/" + uid + "/hotel/").child(name);
+        final Firebase hotelsRef = new Firebase("https://myAppName.firebaseio.com/Users/" + uid + "/hotel/").child(name);
         hotelsRef.setValue(rateHotel(name, lat, lon, author, foodRating, serviceRating, comfortRating, averageRating, review));
         presenter.onSuccess(name, lat, lon, author);
     }
