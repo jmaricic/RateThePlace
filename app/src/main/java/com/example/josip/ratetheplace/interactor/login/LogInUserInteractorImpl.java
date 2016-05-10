@@ -15,7 +15,7 @@ import com.firebase.client.ValueEventListener;
 public class LogInUserInteractorImpl implements LogInUserInteractor {
 
 
-    private Firebase firebase = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+    private Firebase firebase = new Firebase("https://myAppName.firebaseio.com/Users/");
     private final LoginPresenter presenter;
 
 
@@ -29,7 +29,7 @@ public class LogInUserInteractorImpl implements LogInUserInteractor {
 
             @Override
             public void onAuthenticated(final AuthData authData) {
-                Firebase firebase = new Firebase("https://josip-my-application.firebaseio.com/Users/" + authData.getUid());
+                Firebase firebase = new Firebase("https://myAppName.firebaseio.com/Users/" + authData.getUid());
                 firebase.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
