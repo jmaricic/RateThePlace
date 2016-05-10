@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class EditHotelInteractorImpl implements EditHotelInteractor {
 
-    private Firebase firebase = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+    private Firebase firebase = new Firebase("https://myAppName.firebaseio.com/Users/");
     private EditHotelPresenter presenter;
 
     public EditHotelInteractorImpl(EditHotelPresenter presenter) {
@@ -23,12 +23,12 @@ public class EditHotelInteractorImpl implements EditHotelInteractor {
     @Override
     public void editHotel(String newName, String name, double lat, double lon, String author, float foodRating, float serviceRating, float comfortRating, float averageRating, String review) {
         String uid = firebase.getAuth().getUid();
-        final Firebase hotelsRef = new Firebase("https://josip-my-application.firebaseio.com/Users/" + uid + "/hotel/").child(name);
+        final Firebase hotelsRef = new Firebase("https://myAppName.firebaseio.com/Users/" + uid + "/hotel/").child(name);
 
         if(!name.equals(newName)) {
             hotelsRef.removeValue();
 
-            final Firebase hotelsRefEdited = new Firebase("https://josip-my-application.firebaseio.com/Users/" + uid + "/hotel/").child(newName);
+            final Firebase hotelsRefEdited = new Firebase("https://myAppName.firebaseio.com/Users/" + uid + "/hotel/").child(newName);
 
             hotelsRefEdited.setValue(rateHotel(newName,
                     lat, lon, author, foodRating, serviceRating,
@@ -47,7 +47,7 @@ public class EditHotelInteractorImpl implements EditHotelInteractor {
     @Override
     public void deleteHotel(String name, double lat, double lon, String author, float foodRating, float serviceRating, float comfortRating, float averageRating, String review) {
         String uid = firebase.getAuth().getUid();
-        final Firebase hotelsRef = new Firebase("https://josip-my-application.firebaseio.com/Users/" + uid + "/hotel/").child(name);
+        final Firebase hotelsRef = new Firebase("https://myAppName.firebaseio.com/Users/" + uid + "/hotel/").child(name);
         hotelsRef.removeValue();
 
         presenter.hotelDeleted();
