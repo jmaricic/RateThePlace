@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/info_window"
+    android:background="@color/colorPrimary">
+
+    <include layout="@layout/row_holder_food"
+        android:id="@+id/row2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/row0"/>
+
+    <include layout="@layout/row_holder_service"
+        android:id="@+id/row3"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/row2"/>
+
+    <include layout="@layout/row_holder_comfort"
+        android:id="@+id/row4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/row3"/>
+
+    <include layout="@layout/row_holder_review"
+        android:id="@+id/row5"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/row4"/>
+
+</RelativeLayout>

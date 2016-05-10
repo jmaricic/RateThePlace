@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:id="@+id/lin"
+    >
+
+    <TextView
+        android:textColor="#FFFF"
+        android:id="@+id/hotel_name_row"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="HOTEL"
+        android:padding="6dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="4dp"
+        />
+
+    <RatingBar
+        android:numStars="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating_bar_row"
+        android:layout_gravity="left"
+        android:foregroundGravity="left"
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:isIndicator="true"
+        />
+
+</LinearLayout>
+
+</RelativeLayout>

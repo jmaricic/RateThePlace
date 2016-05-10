@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Rate The Place</string>
+
+    <!--Login screen ids-->
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Enter password</string>
+    <string name="sign_up_login">Not a member? -Sign up!</string>
+    <string name="sign_in">Sign In</string>
+    <string name="app_title">Rate The Place!</string>
+    <string name="login_error">Wrong email or password</string>
+
+    <!--Register screen ids-->
+    <string name="check">Check</string>
+    <string name="check_message">You need to enter both username and email</string>
+    <string name="wrong_email_message">Wrong email type</string>
+    <string name="check_username_taken">Try again, this username or email has already been used</string>
+    <string name="username_available">Try again, this username or email has already been used</string>
+    <string name="username_taken">This one is taken!</string>
+
+    <string name="email_hint">Enter Email</string>
+    <string name="sign_up_register">Sign up!</string>
+    <string name="next">next</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="hotel_name_textView">Hotel Name</string>
+    <string name="average_rating_textView">Average Rating</string>
+
+    <string name="hotel_list_toolbar">List of hotels</string>
+    <string name="go_back_toolbar">Go Back</string>
+    <string name="logout_message">You are logged out</string>
+
+    <string name="hotel_rating">Rating:</string>
+
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    >
+
+    <RelativeLayout
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/hotelName"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="Hotel Name: "
+            android:textColor="#FFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/hotelNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/hotelName"
+            android:gravity="center_vertical"
+            android:text="Neki hotel"
+            android:textColor="#FFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/averageRating"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/hotelName"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="Average Rating:"
+            android:textColor="#FFFF"
+            android:textSize="14sp" />
+
+        <RatingBar
+            android:id="@+id/average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/hotelNameTv"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/averageRating"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:scaleX="0.4"
+            android:scaleY="0.4" />
+
+        <TextView
+            android:id="@+id/reviewText"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/averageRating"
+            android:layout_marginTop="7dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="USER REVIEW: "
+            android:textColor="#FFD700"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/reviewTekst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/average"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/reviewText"
+            android:gravity="left"
+            android:maxLines="3"
+            android:scrollbars="vertical"
+            android:text="jisadh jsk ladjkasj kasldj a dslks adjdsa s adjkls adjks adjjs kadljks ladj askljdsa "
+            android:textColor="#FFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+</FrameLayout>
