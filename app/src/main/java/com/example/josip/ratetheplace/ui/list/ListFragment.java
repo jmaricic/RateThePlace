@@ -34,7 +34,7 @@ public class ListFragment extends BaseFragment implements Toolbar.OnMenuItemClic
     Toolbar mToolbar;
 
     private RecyclerView mRecyclerView;
-    private Firebase hotelsRef = new Firebase("https://josip-my-application.firebaseio.com/Users/");
+    private Firebase hotelsRef = new Firebase("https://myAppName.firebaseio.com/Users/");
     private CustomAdapter mAdapter;
 
     public static ListFragment newInstance() {
